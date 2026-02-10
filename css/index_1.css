@@ -7,38 +7,21 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html,
-body,
-#root {
-    font-family: 'Montserrat', sans-serif;
+html, body, #root {
+    height: 100%;
 }
 
-@media only screen and (min-height: 844px) {
-    body {
-        height: 100%;
-        width: 100%;
-    }
-    .content {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(#3B3E98, #1681D3);
-        margin: 0;
-    }
+body {
+    background: linear-gradient(#3B3E98, #1681D3);
 }
 
-@media only screen and (max-height: 844px) {
-    body {
-        height: 100%;
-        width: 100%;
-    }
-    .content {
-        position: absolute;
-        width: 100%;
-        height: 844px;
-        background: linear-gradient(#3B3E98, #1681D3);
-        margin: 0;
-    }
+.content {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100dvh;
+    background: linear-gradient(#3B3E98, #1681D3);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 html, body {
